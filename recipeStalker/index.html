@@ -13,7 +13,31 @@
 		<script src="js/libs/modernizr.custom.min.js"></script>
 	</head>
 	<body>
-		<div data-role="page" id="home" data-theme="a">
+        <div data-role="page" id="home" data-theme="a">
+            <div data-role="header" data-theme="a" data-position="fixed">
+                <h1>Recipe Stalker</h1>
+            </div>
+            <div id="login">
+                Username:  <br />
+                Password:  <br />
+                [ ] Save username and password
+                <a href="#main" data-role="button" data-theme="b">Login</a>
+                <a href="#register" data-role="button" data-theme="b">New User</a>
+            </div>
+        </div> <!-- Home page -->
+        <div data-role="page" id="register" data-theme="a">
+            <div data-role="header" data-theme="a" data-position="fixed">
+                <h1>Recipe Stalker</h1>
+            </div>
+            <div id="signUp">
+                Username:  <br />
+                Password:  <br />
+                Confirm Password: <br />
+                Email: <br />
+                <a href="#main" data-role="button" data-theme="b">Get Stalkin</a>
+            </div>
+        </div>
+		<div data-role="page" id="main" data-theme="a">
 			<div data-role="header" data-theme="a" data-position="fixed">
 				<h1>Recipe Stalker</h1>
 			</div> <!-- Header -->
@@ -41,12 +65,12 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+						<li><a href="#main" data-icon="home" class="ui-btn-active">Home</a></li>
 						<li><a href="#cart" data-icon="info">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
 			</div> <!-- Footer -->
-		</div><!-- Home Page -->
+		</div><!-- Main Page -->
 		
 		<div data-role="page" id="appetizers" data-theme="a" data-add-back-btn="true">
 			<div data-role="header" data-theme="a" data-position="fixed">
@@ -73,7 +97,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#main" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info" class="ui-btn-active">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -99,7 +123,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#main" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info" class="ui-btn-active">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -126,7 +150,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#main" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info" class="ui-btn-active">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -152,7 +176,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#main" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info" class="ui-btn-active">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -176,7 +200,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#main" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info" class="ui-btn-active">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -202,7 +226,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#main" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info" class="ui-btn-active">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -225,7 +249,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#main" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info" class="ui-btn-active">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -252,7 +276,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#main" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info" class="ui-btn-active">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -275,7 +299,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#main" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info" class="ui-btn-active">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -298,7 +322,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#main" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info" class="ui-btn-active">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -321,7 +345,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#main" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info" class="ui-btn-active">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -340,7 +364,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#main" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info" class="ui-btn-active">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -358,7 +382,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#main" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info" class="ui-btn-active">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -376,7 +400,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#main" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info" class="ui-btn-active">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
