@@ -13,7 +13,7 @@
 		<script src="js/libs/modernizr.custom.min.js"></script>
 	</head>
 	<body>
-        <div data-role="page" id="home" data-theme="a">
+        <div data-role="page" id="main" data-theme="a">
             <div data-role="header" data-theme="a" data-position="fixed">
                 <h1>Recipe Stalker</h1>
             </div>
@@ -21,10 +21,11 @@
                 Username:  <br />
                 Password:  <br />
                 [ ] Save username and password
-                <a href="#main" data-role="button" data-theme="b">Login</a>
+                <a href="#home" data-role="button" data-theme="b">Login</a>
                 <a href="#register" data-role="button" data-theme="b">New User</a>
             </div>
-        </div> <!-- Home page -->
+        </div> <!-- main page -->
+
         <div data-role="page" id="register" data-theme="a">
             <div data-role="header" data-theme="a" data-position="fixed">
                 <h1>Recipe Stalker</h1>
@@ -34,17 +35,18 @@
                 Password:  <br />
                 Confirm Password: <br />
                 Email: <br />
-                <a href="#main" data-role="button" data-theme="b">Get Stalkin</a>
+                <a href="#home" data-role="button" data-theme="b">Get Stalkin</a>
             </div>
-        </div>
-		<div data-role="page" id="main" data-theme="a">
+        </div><!-- Register page -->
+
+		<div data-role="page" id="home" data-theme="a">
 			<div data-role="header" data-theme="a" data-position="fixed">
 				<h1>Recipe Stalker</h1>
 			</div> <!-- Header -->
 			<div id="cta">
 				<img src="image" id="cta">
 				<nav>
-					<a href="addItem.html" data-role="button" data-theme="b">Add A Recipe</a> 
+					<a href="#addRecipe" data-role="button" data-theme="b">Add A Recipe</a>
 				</nav>
 			</div>
 			<div data-role"content">
@@ -65,12 +67,79 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#main" data-icon="home" class="ui-btn-active">Home</a></li>
+						<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
 						<li><a href="#cart" data-icon="info">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
 			</div> <!-- Footer -->
-		</div><!-- Main Page -->
+		</div><!-- home Page -->
+
+        <div data-role="page" id="addRecipe" data-theme="a">
+            <div data-role="header" data-theme="a" data-position="fixed">
+                <h1>Add A Recipe</h1>
+            </div><!-- header -->
+            <span id="requiredHint">*fields are required.</span>
+            <div data-role="content">
+                <form action="" id="addRecipeForm">
+                    <div data-role="fieldcontain">
+                        <label for="category">*Category</label>
+                        <select name="category" id="category" data-native-menu="false" class="required">
+                            <option data-placeholder="true">Select a Category</option>
+                            <option value="cell">Cell</option>
+                            <option value="car">Car</option>
+                            <option value="rent">Rent</option>
+                            <option value="cable">Cable</option>
+                        </select>
+                    </div><!-- Category dropdown fieldcontain -->
+                    <div data-role="fieldcontain">
+                        <label for="compName">*Company Name</label>
+                        <input type="text" name="compName" id="compName" placeholder="Please enter Company Name." class="required" />
+                    </div><!-- Company Name text fieldcontain -->
+                    <div data-role="fieldcontain">
+                        <label for="compEmail">*Company Email</label>
+                        <input type="text" name="compEmail" id="compEmail" placeholder="Please enter a valid Email." class="required email" /><br />
+                        <span id="requiredHint">Example: abc@abc.com</span>
+                    </div><!-- Company Email text fieldcontain-->
+                    <div data-role="fieldcontain">
+                        <label for="compWebsite">Company Website</label>
+                        <input type="text" name="compWebsite" id="compWebsite" placeholder="Enter company website."  />
+                    </div> <!-- Company website text fieldcontain -->
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <legend>Pay By</legend>
+                            <input type="radio" value="internet" name="internet" data-theme="b" id="internet" class="required" />
+                            <label for="internet">Internet</label>
+                            <input type="radio" value="mail" name="mail" data-theme="b" id="mail" />
+                            <label for="mail">Mail</label>
+                        </fieldset>
+                    </div><!-- Payby Radio fieldcontain -->
+                    <div data-role="fieldcontain">
+                        <label for="pastDue">Past Due?</label><br />
+                        <select data-role="slider" data-theme="b">
+                            <option value="off">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div><!-- Past due slider fieldcontain -->
+                    <div data-role="fieldcontain">
+                        <label for="budgetPercent">Budget Percent</label>
+                        <input type="range" name="budgetPercent" id="budgetPercent" data-theme="b" value="50" min="0" max="100" />
+                    </div><!-- budget percent slider fieldcontain -->
+                    <div data-role="fieldcontain">
+                        <label for="mydate">Date Added</label>
+                        <input name="dateAdded" id="dateAdded" type="date" data-role="date" data-options='{"mode": "calbox"}'>
+                    </div><!-- Date added fieldcontain -->
+                    <div data-role="fieldcontain">
+                        <label for="notes">Notes</label>
+                        <textarea></textarea>
+                    </div><!-- Notes textarea fieldcontain -->
+                    <div data-role="fieldcontain">
+                        <input type="submit" value="Submit" data-inline="true" data-theme="b"  />
+                        <a href="#main" id="cancelLink">Cancel</a>
+                    </div><!-- submit/clear buttons fieldcontain -->
+                    <a href="#recordRecipeErrors" id="recipeFormErrors" data-rel="dialog"></a>
+                </form>
+            </div> <!-- Content -->
+        </div><!-- Add Recipe Page -->
 		
 		<div data-role="page" id="appetizers" data-theme="a" data-add-back-btn="true">
 			<div data-role="header" data-theme="a" data-position="fixed">
@@ -97,7 +166,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#main" data-icon="home">Home</a></li>
+						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -123,7 +192,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#main" data-icon="home">Home</a></li>
+						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -150,7 +219,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#main" data-icon="home">Home</a></li>
+						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -176,7 +245,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#main" data-icon="home">Home</a></li>
+						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -200,7 +269,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#main" data-icon="home">Home</a></li>
+						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -226,7 +295,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#main" data-icon="home">Home</a></li>
+						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -249,7 +318,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#main" data-icon="home">Home</a></li>
+						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -276,7 +345,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#main" data-icon="home">Home</a></li>
+						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -299,7 +368,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#main" data-icon="home">Home</a></li>
+						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -322,7 +391,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#main" data-icon="home">Home</a></li>
+						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -345,7 +414,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#main" data-icon="home">Home</a></li>
+						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -364,7 +433,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#main" data-icon="home">Home</a></li>
+						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -382,7 +451,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search">Search</a></li>
-						<li><a href="#main" data-icon="home">Home</a></li>
+						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info" class="ui-btn-active">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
@@ -400,7 +469,7 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#search" data-icon="search" class="ui-btn-active">Search</a></li>
-						<li><a href="#main" data-icon="home">Home</a></li>
+						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#cart" data-icon="info">Grocery List</a></li>
 					</ul>
 				</div><!-- Navbar -->
