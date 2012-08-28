@@ -18,9 +18,12 @@
                 <h1>Recipe Stalker</h1>
             </div>
             <div id="login">
-                Username:  <br />
-                Password:  <br />
-                [ ] Save username and password
+                Username desired:<input type="text" id="loginUsername" maxlength="15" min="6">
+                Password:<input type="text" id="loginPassword" maxlength="15" min="6">
+                <br />
+                <input type="checkbox" value="yes" name="saveLoginInfo" data-theme="a" id="saveLoginInfo" />
+                <label for="saveLoginInfo">Save username and password</label>
+                <br />
                 <a href="#home" data-role="button" data-theme="b">Login</a>
                 <a href="#register" data-role="button" data-theme="b">New User</a>
             </div>
@@ -31,10 +34,10 @@
                 <h1>Recipe Stalker</h1>
             </div>
             <div id="signUp">
-                Username:  <br />
-                Password:  <br />
-                Confirm Password: <br />
-                Email: <br />
+                Username desired:<input type="text" id="username" maxlength="15" min="6">
+                Password:<input type="text" id="password" maxlength="15" min="6">
+                Confirm Password:<input type="text" id="confirmPassword" maxlength="15" min="6">
+                Email:<input type="text" id="email">
                 <a href="#home" data-role="button" data-theme="b">Get Stalkin</a>
             </div>
         </div><!-- Register page -->
@@ -44,7 +47,7 @@
 				<h1>Recipe Stalker</h1>
 			</div> <!-- Header -->
 			<div id="cta">
-				<img src="image" id="cta">
+				<img src="image" id="ctaImage">
 				<nav>
 					<a href="#addRecipe" data-role="button" data-theme="b">Add A Recipe</a>
 				</nav>

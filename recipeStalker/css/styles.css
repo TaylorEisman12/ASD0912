@@ -11,3 +11,15 @@ label.error{display:block; margin:10px 0; color:red;}
 #cancelLink{padding: 0px 40px;}
 
 #measurement{width:50px;}
+
+#username{width:150px;}
+
+#password{width:150px;}
+
+#confirmPassword{width:150px;}
+
+#email{width:350px;}
+
+#loginUsername{width:150px;}
+
+#loginPassword{width:150px;}
