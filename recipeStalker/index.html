@@ -85,31 +85,24 @@
                         <label for="category">*Category</label>
                         <select name="category" id="category" data-native-menu="false" class="required">
                             <option data-placeholder="true">Select a Category</option>
-                            <option value="cell">Cell</option>
-                            <option value="car">Car</option>
-                            <option value="rent">Rent</option>
-                            <option value="cable">Cable</option>
+                            <option value="breakfast">Breakfast</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="dinner">Dinner</option>
+                            <option value="breads">Breads</option>
+                            <option value="appetizers">Appetizers</option>
+                            <option value="snacks">Snacks</option>
                         </select>
                     </div><!-- Category dropdown fieldcontain -->
                     <div data-role="fieldcontain">
-                        <label for="compName">*Company Name</label>
-                        <input type="text" name="compName" id="compName" placeholder="Please enter Company Name." class="required" />
-                    </div><!-- Company Name text fieldcontain -->
-                    <div data-role="fieldcontain">
-                        <label for="compEmail">*Company Email</label>
-                        <input type="text" name="compEmail" id="compEmail" placeholder="Please enter a valid Email." class="required email" /><br />
-                        <span id="requiredHint">Example: abc@abc.com</span>
-                    </div><!-- Company Email text fieldcontain-->
-                    <div data-role="fieldcontain">
-                        <label for="compWebsite">Company Website</label>
-                        <input type="text" name="compWebsite" id="compWebsite" placeholder="Enter company website."  />
-                    </div> <!-- Company website text fieldcontain -->
+                        <label for="ingrediant1">*Ingrediant</label>
+                        <input type="text" name="ingrediant1" id="ingrediant1" placeholder="Please enter a Ingrediant." class="required" />
+                    </div><!-- Ingrediant1 text fieldcontain -->
                     <div data-role="fieldcontain">
                         <fieldset data-role="controlgroup">
                             <legend>Pay By</legend>
-                            <input type="radio" value="internet" name="internet" data-theme="b" id="internet" class="required" />
+                            <input type="radio" value="internet" name="internet" data-theme="a" id="internet" class="required" />
                             <label for="internet">Internet</label>
-                            <input type="radio" value="mail" name="mail" data-theme="b" id="mail" />
+                            <input type="radio" value="mail" name="mail" data-theme="a" id="mail" />
                             <label for="mail">Mail</label>
                         </fieldset>
                     </div><!-- Payby Radio fieldcontain -->
@@ -134,7 +127,7 @@
                     </div><!-- Notes textarea fieldcontain -->
                     <div data-role="fieldcontain">
                         <input type="submit" value="Submit" data-inline="true" data-theme="b"  />
-                        <a href="#main" id="cancelLink">Cancel</a>
+                        <a href="#home" id="cancelLink">Cancel</a>
                     </div><!-- submit/clear buttons fieldcontain -->
                     <a href="#recordRecipeErrors" id="recipeFormErrors" data-rel="dialog"></a>
                 </form>
