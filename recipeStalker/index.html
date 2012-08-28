@@ -96,17 +96,20 @@
                     <div data-role="fieldcontain">
                         <label for="ingrediant1">*Ingrediant</label>
                         <input type="text" name="ingrediant1" id="ingrediant1" placeholder="Please enter a Ingrediant." class="required" />
-                    </div><!-- Ingrediant1 text fieldcontain -->
-                    <div data-role="fieldcontain">
-                        <fieldset data-role="controlgroup">
-                            <legend>Measurement:</legend>
-                            <input type="text" id="measurement" name="measurement" value="1 1/3" maxlength="6" />
-                            <input type="radio" value="internet" name="internet" data-theme="a" id="internet" class="required" />
-                            <label for="internet">Internet</label>
-                            <input type="radio" value="mail" name="mail" data-theme="a" id="mail" />
-                            <label for="mail">Mail</label>
-                        </fieldset>
+                        <div>
+                            <fieldset data-role="controlgroup">
+                                <legend>Measurement:</legend>
+                                <input type="text" id="measurement" name="numMeasurement" value="1 1/3" maxlength="6" />
+                                <input type="radio" value="cups" name="measurement" data-theme="a" id="cups" class="required" />
+                                <label for="cups">Cups</label>
+                                <input type="radio" value="teaspoons" name="measurement" data-theme="a" id="teaspoons" />
+                                <label for="teaspoons">Teaspoons</label>
+                                <input type="radio" value="tablespoons" name="measurement" data-theme="a" id="tablespoons" />
+                                <label for="tablespoons">Tablespoons</label>
+                            </fieldset>
+                        </div>
                     </div><!-- Payby Radio fieldcontain -->
+
                     <div data-role="fieldcontain">
                         <label for="pastDue">Past Due?</label><br />
                         <select data-role="slider" data-theme="b">
