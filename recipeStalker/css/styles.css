@@ -1,0 +1,13 @@
+/* Taylor Eisman */
+/* ASD 08/12 */
+/* Project 2 */
+
+label.error{display:block; margin:10px 0; color:red;}
+
+#requiredHint{color:red; font-size: small;}
+
+#cta{padding: 0px 20px;}
+
+#cancelLink{padding: 0px 40px;}
+
+#measurement{width:50px;}
