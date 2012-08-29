@@ -61,7 +61,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="249" column="49" selection-start="13510" selection-end="13762" vertical-scroll-proportion="-21.25">
+            <state line="352" column="57" selection-start="18280" selection-end="18733" vertical-scroll-proportion="-20.625">
               <folding />
             </state>
           </provider>
@@ -79,7 +79,7 @@
       <file leaf-file-name="json.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascript/json.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="124" selection-start="2712" selection-end="2712" vertical-scroll-proportion="0.83169705">
+            <state line="85" column="12" selection-start="5081" selection-end="5081" vertical-scroll-proportion="0.49509117">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -99,7 +99,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-53" />
+    <option name="x" value="-20" />
     <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="874" />
@@ -371,7 +371,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-53" y="22" width="1440" height="874" extended-state="0" />
+    <frame x="-20" y="22" width="1440" height="874" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -496,14 +496,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="249" column="49" selection-start="13510" selection-end="13762" vertical-scroll-proportion="-21.25">
+        <state line="352" column="57" selection-start="18280" selection-end="18733" vertical-scroll-proportion="-20.625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/json.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="124" selection-start="2712" selection-end="2712" vertical-scroll-proportion="0.83169705">
+        <state line="85" column="12" selection-start="5081" selection-end="5081" vertical-scroll-proportion="0.49509117">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
