@@ -230,9 +230,9 @@ var json = {
         "measurement2": ["1", "Cups"],
         "ingrediant3": ["Ingrediant", "Water"],
         "measurement3": ["1/2", "Teaspoons"],
-        "addToFav": ["Favorite:", "Yes"],
+        "addToFav": ["Favorite:", "No"],
         "prepTime": ["15", "Minutes"],
         "dateAdded": ["Date Added:", "08/28/2012"],
-        "instructions": ["Instructions:", "Preheat oven at 325 degrees."]
+        "instructions": ["Instructions:", "Preheat oven at 375 degrees."]
     },
 }
