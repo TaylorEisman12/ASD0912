@@ -68,13 +68,76 @@ var getData = function(){
 };
 
 var storeData = function(data){
+	if(!key){
+			var id			= Math.floor(Math.random()*100000001);
+		}else{
+			id = key;
+		}
+		getSelectedRadio();
+		getCheckboxValue();
+		
+		var item					= {};
+			item.recipeName			= ["Recipe Name: ", $('#recipeName').val()];
+			item.category			= ["Category: ", $('#categories').val()];
+			item.ingrediant1		= ["Ingrediant: ", $('#ingrediant1').val()];
+			// function to add more ingrediants if user adds
+			item.measurement1		= ["Measurement: ", $('#measurement1').val()];
+			// function to add more measurements if user adds
+			item.addToFav			= ["Favorite: ", addToFavValue];
+			item.prepTime			= ["Time to prep: ", $('#prepTime').value];
+			item.dateAdded			= ["Date Added: ", $('#dateAddded').value];
+			item.instructions		= ["Instructions: ", $('#instructions').val()];
+		
+		localStorage.setItem(id, JSON.stringify(item));
+		alert("Recipe Saved!");
+		save.off("click");
+		save.on("click", storeData);
+		window.location.reload();
 	
+	};
+	
+	var getSelectedRadio = function(){
+	var radios = function (){
+		$('input:radio[name="addToFav"]:checked').val();
+		return($('input:radio[name="addToFav"]:checked').val());
+
+};
+
 }; 
 
 var	deleteItem = function (){
-			
+	var ask = confirm("Are you sure you want to delete this recipe?");
+		if(ask){
+			localStorage.removeItem(this.key);
+			alert("Recipe was deleted.");
+			window.location.reload();
+		}else{
+			alert("Recipe was not deleted.");
+		}		
 };
 					
 var clearLocal = function(){
+	if(localStorage.length === 0){
+			alert("No data to clear.");
+		}else{
+			localStorage.clear();
+			alert("All Bills are deleted");
+			window.location.reload();
+			return false;
+		}
+	}
+	
+	var payByValue,
+		addToFavValue = "No",
+		errMsg = ge('errors');
+	
+	makeCats();
+	
+	var displayLink = ge('displayLink');	
+	displayLink.addEventListener("click", getData);
+	var clearLink = ge('clear');
+	clearLink.addEventListener("click", clearLocal);
+	var save = ge('submit');
+	save.addEventListener("click", validate);
 
 };
