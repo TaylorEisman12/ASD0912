@@ -127,14 +127,12 @@ var clearLocal = function(){
 		}
 	}
 	
-	var payByValue,
+	var addToFavValue,
 		addToFavValue = "No",
 		errMsg = ge('errors');
 	
 	makeCats();
-	
-	var displayLink = ge('displayLink');	
-	displayLink.addEventListener("click", getData);
+
 	var clearLink = ge('clear');
 	clearLink.addEventListener("click", clearLocal);
 	var save = ge('submit');
