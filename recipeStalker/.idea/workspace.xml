@@ -61,7 +61,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="49" selection-start="4145" selection-end="4158" vertical-scroll-proportion="1.8722787">
+            <state line="60" column="107" selection-start="2852" selection-end="2852" vertical-scroll-proportion="1.3062409">
               <folding />
             </state>
           </provider>
@@ -82,13 +82,13 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/css/styles.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/javascript/json.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="396" />
+    <option name="x" value="269" />
     <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="874" />
@@ -363,7 +363,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="396" y="22" width="1440" height="874" extended-state="0" />
+    <frame x="269" y="22" width="1440" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -497,7 +497,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="49" selection-start="4145" selection-end="4158" vertical-scroll-proportion="1.8722787">
+        <state line="60" column="107" selection-start="2852" selection-end="2852" vertical-scroll-proportion="1.3062409">
           <folding />
         </state>
       </provider>
