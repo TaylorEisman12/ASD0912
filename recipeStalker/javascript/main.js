@@ -2,6 +2,10 @@
 // ASD 09/12
 // Project 1
 
+// comments function   add comments for recipes
+// groceryList function set up pop-up list with checkbox populated with ingrediants to add only needed ingrediants
+// Username and password function needed
+
 $('#home').on('pageinit', function(){
 	//code needed for home page goes here
 });	
