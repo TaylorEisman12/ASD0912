@@ -70,7 +70,7 @@
       <file leaf-file-name="data.csv" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/xhr/data.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="20" column="0" selection-start="5371" selection-end="5371" vertical-scroll-proportion="0.45592704">
               <folding />
             </state>
           </provider>
@@ -110,12 +110,13 @@
         <option value="$PROJECT_DIR$/javascript/json.js" />
         <option value="$PROJECT_DIR$/xhr/data.json" />
         <option value="$PROJECT_DIR$/xhr/data.xml" />
+        <option value="$PROJECT_DIR$/xhr/data.csv" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="y" value="22" />
+    <option name="x" value="31" />
+    <option name="y" value="66" />
     <option name="width" value="1440" />
     <option name="height" value="874" />
   </component>
@@ -403,7 +404,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="22" width="1440" height="874" extended-state="0" />
+    <frame x="31" y="66" width="1440" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -556,7 +557,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/xhr/data.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="20" column="0" selection-start="5371" selection-end="5371" vertical-scroll-proportion="0.45592704">
           <folding />
         </state>
       </provider>
