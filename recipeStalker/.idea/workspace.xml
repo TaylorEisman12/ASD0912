@@ -58,19 +58,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="454" column="29" selection-start="22677" selection-end="22677" vertical-scroll-proportion="-0.625">
+            <state line="396" column="23" selection-start="18938" selection-end="18938" vertical-scroll-proportion="0.5940171">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data.csv" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="data.csv" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xhr/data.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="5371" selection-end="5371" vertical-scroll-proportion="0.45592704">
+            <state line="20" column="0" selection-start="5371" selection-end="5371" vertical-scroll-proportion="-5.4545455">
               <folding />
             </state>
           </provider>
@@ -88,8 +88,10 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascript/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="40" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="2" column="12" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,18 +107,18 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/css/styles.css" />
-        <option value="$PROJECT_DIR$/javascript/main.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/javascript/json.js" />
         <option value="$PROJECT_DIR$/xhr/data.json" />
         <option value="$PROJECT_DIR$/xhr/data.xml" />
         <option value="$PROJECT_DIR$/xhr/data.csv" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/javascript/main.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="31" />
-    <option name="y" value="66" />
+    <option name="x" value="67" />
+    <option name="y" value="82" />
     <option name="width" value="1440" />
     <option name="height" value="874" />
   </component>
@@ -404,7 +406,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="31" y="66" width="1440" height="874" extended-state="0" />
+    <frame x="67" y="82" width="1440" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -524,16 +526,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="7" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="40" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xhr/data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="316" column="24" selection-start="16040" selection-end="16040" vertical-scroll-proportion="6.6479664">
@@ -548,16 +540,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/javascript/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="454" column="29" selection-start="22677" selection-end="22677" vertical-scroll-proportion="-0.625">
-          <folding />
+        <state line="2" column="12" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="7" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xhr/data.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="5371" selection-end="5371" vertical-scroll-proportion="0.45592704">
+        <state line="20" column="0" selection-start="5371" selection-end="5371" vertical-scroll-proportion="-5.4545455">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="396" column="23" selection-start="18938" selection-end="18938" vertical-scroll-proportion="0.5940171">
           <folding />
         </state>
       </provider>

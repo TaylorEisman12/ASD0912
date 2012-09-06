@@ -57,6 +57,9 @@
 					<li><div class="linkTitle">View :</div></li>
 				</ul>
 				<ul data-role="listview" data-shadow="true" data-inset="true">
+                    <a href="#dataCSV" data-role="button" data-theme="b" data-icon="star">CSV Data</a>
+                    <a href="#dataJSON" data-role="button" data-theme="b" data-icon="star">JSON Data</a>
+                    <a href="#dataXML" data-role="button" data-theme="b" data-icon="star">XML Data</a>
 					<a href="#myProfile" data-role="button" data-theme="b" data-icon="star">My Profile</a>
 					<a href="#breakfast" data-role="button" data-theme="b" data-icon="star">Breakfast</a>
 					<a href="#lunch" data-role="button" data-theme="b" data-icon="star">Lunch</a>
@@ -155,20 +158,7 @@
 			</div> <!-- Header -->
 			<div data-role"content">
 				Search: Filter: Something
-				<ul data-role="listview" data-shadow="true" data-inset="true">
-					<li>
-						<a href="#baconWraps"><h1>Bacon Wraps</h1><p><h2>Ingredients:</h2>1 package Cocktail 											sausages, 1 lb. bacon, 1 cup Brown sugar</a>
-					</li>
-					<li>
-						<a href="#rockNRollCrackers"><h1>Rock N Roll Crackers</h1><h2>Ingredients:</h2>
-						1 package Ranch salad dressing seasoning mix, 1 1/2 tbsp. Crushed red pepper, 1 tsp. Garlic
-						powder, 1 package Saltine crackers, 1 1/2 cups Canola oil</a>
-					</li>
-					<li>
-						<a href="#sausageCheeseBalls"><h1>Sausage Cheese Balls</h1><h2>Ingredients:</h2>
-						1 lb. pan sausage, 2 cups Bisquick, 8 oz. Grated cheddar cheese.</a>
-					</li>
-				</ul>
+
 			</div> <!-- List Content -->
 			<div data-role="footer" data-theme="c" data-position="fixed">
 				<div data-role="navbar">
@@ -181,101 +171,14 @@
 				</div><!-- Navbar -->
 			</div> <!-- Footer -->
 		</div><!-- Appetizers Page -->	
-		
-		<div data-role="page" id="baconWraps" data-theme="a" data-add-back-btn="true">
-			<div data-role="header" data-theme="a" data-position="fixed">
-				<h1>Recipe Stalker</h1>
-			</div> <!-- Header -->
-			<div data-role"content">
-				<ul>
-					<li><h1>Bacon Wraps</h1><p><h2>Ingredients:</h2><li>1 package of Cocktail sausages</li>
-					<li>1 lb. bacon</li><li>1 cup Brown sugar</li>
-					<h3>Instructions:</h3> Cut slab of bacon into quarters.
-					Wrap one piece of quartered bacon slice around each sausage weenie. Place on foil lined cookie sheet.
-					Sprinkle brown sugar on top of each wrapped sausage.<br />
-					<h4>Bake at 400 degrees for 30-40 minutes</h4></p></li>
-				</ul>
-				<a href="#cart" data-role="button" data-theme="b" data-icon="star">Add to grocery list</a>
-			</div> <!-- List Content -->
-			<div data-role="footer" data-theme="c" data-position="fixed">
-				<div data-role="navbar">
-					<ul>
-						<li><a href="#search" data-icon="search">Search</a></li>
-                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
-                        <li><a href="#home" data-icon="home">Home</a></li>
-						<li><a href="#cart" data-icon="info">Grocery List</a></li>
-					</ul>
-				</div><!-- Navbar -->
-			</div> <!-- Footer -->
-		</div><!-- Bacon Wraps Page -->
-		
-		<div data-role="page" id="rockNRollCrackers" data-theme="a" data-add-back-btn="true">
-			<div data-role="header" data-theme="a" data-position="fixed">
-				<h1>Recipe Stalker</h1>
-			</div> <!-- Header -->
-			<div data-role"content">
-				<ul>
-					<li><h1>Rock N Roll Crackers</h1><p><h2>Ingredients:</h2><li>1 package Ranch salad dressing seasoning mix</li>
-					<li>1 1/2 tbsp. Crushed red pepper</li><li>1 tsp. Garlic powder</li><li>1 package Saltine crackers</li>
-					<li>1 1/2 cups Canola oil</li>
-					<h3>Instructions:</h3>In a small bowl mix together salad seasoning mix, red pepper flakes, and garlic
-					powder. Set aside. Place crackers in a large gallon sized sealable container, drizzle with canola oil.
-					Add dry ingredients and seal container. Gently roll container to coat crackers with seasonings.<br />
-					<h4>Gently roll crackers every 30 minutes for 4 hours for best results.</h4></p></li>
-				</ul>
-				<a href="#cart" data-role="button" data-theme="b" data-icon="star">Add to grocery list</a>
-			</div> <!-- List Content -->
-			<div data-role="footer" data-theme="c" data-position="fixed">
-				<div data-role="navbar">
-					<ul>
-						<li><a href="#search" data-icon="search">Search</a></li>
-                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
-                        <li><a href="#home" data-icon="home">Home</a></li>
-						<li><a href="#cart" data-icon="info">Grocery List</a></li>
-					</ul>
-				</div><!-- Navbar -->
-			</div> <!-- Footer -->
-		</div><!-- Rock N Roll Crackers Page -->
-		
-		<div data-role="page" id="sausageCheeseBalls" data-theme="a" data-add-back-btn="true">
-			<div data-role="header" data-theme="a" data-position="fixed">
-				<h1>Recipe Stalker</h1>
-			</div> <!-- Header -->
-			<div data-role"content">
-				<ul>
-					<li><h1>Sausage Cheese Balls</h1><p><h2>Ingredients:</h2><li>1 lb. Pan sausage</li><li>2 cups Bisquick</li>
-					<li>8 oz. Grated cheddar cheese</li>
-					<h3>Instructions:</h3>Mix all ingredients well and form into walnut sized balls. Place on cookie sheet
-					sprayed with Pam or non stick spray.<br />
-					<h4>Bake at 370 degrees for 15-20 minutes depending on the size of balls. Can be frozen and heated
-					before serving.</h4></p></li>
-				</ul>
-				<a href="#cart" data-role="button" data-theme="b" data-icon="star">Add to grocery list</a>
-			</div> <!-- List Content -->
-			<div data-role="footer" data-theme="c" data-position="fixed">
-				<div data-role="navbar">
-					<ul>
-						<li><a href="#search" data-icon="search">Search</a></li>
-                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
-                        <li><a href="#home" data-icon="home">Home</a></li>
-						<li><a href="#cart" data-icon="info">Grocery List</a></li>
-					</ul>
-				</div><!-- Navbar -->
-			</div> <!-- Footer -->
-		</div><!-- Sausage Cheese Balls Page -->	
-	
+
 		<div data-role="page" id="breads" data-theme="a" data-add-back-btn="true">
 			<div data-role="header" data-theme="a" data-position="fixed">
 				<h1>Recipe Stalker</h1>
 			</div> <!-- Header -->
 			<div data-role"content">
 				Search: Filter: Something
-				<ul data-role="listview" data-shadow="true" data-inset="true">
-					<li>
-						<a href="#popeyesBiscuits"><h1>Popeye's Biscuits</h1><p><h2>Ingredients:</h2>4 cups Bisquick, 
-						3/4 cup 7-Up, 8 oz Sour cream, 1 Stick butter</a>
-					</li>
-				</ul>
+
 			</div> <!-- List Content -->
 			<div data-role="footer" data-theme="c" data-position="fixed">
 				<div data-role="navbar">
@@ -288,33 +191,6 @@
 				</div><!-- Navbar -->
 			</div> <!-- Footer -->
 		</div><!-- Breads Page -->
-		
-		<div data-role="page" id="popeyesBiscuits" data-theme="a" data-add-back-btn="true">
-			<div data-role="header" data-theme="a" data-position="fixed">
-				<h1>Recipe Stalker</h1>
-			</div> <!-- Header -->
-			<div data-role"content">
-				<ul>
-					<li><h1>Popeye's Biscuits</h1><p><h2>Ingredients:</h2><li>4 cups Bisquick</li><li>3/4 cup 7-Up</li>
-					<li>8 oz Sour cream</li><li>1 Stick butter</li>
-					<h3>Instructions:</h3>Combine bisquick, 7-up, and sour cream. Stir until lumps are gone. Cut stick of 
-					butter in half. Melt 1/2 stick of butter in 9x13 or 9x9 pan. Drop biscuits by tablespoon into pan. <br />
-					<h4>Bake at 350 degrees for 10-12 minutes or until brown. Melt remainder of butter and baste the tops
-					of each biscuit. Let stand for about 15 minutes and then serve.</h4></p></li>
-				</ul>
-				<a href="#cart" data-role="button" data-theme="b" data-icon="star">Add to grocery list</a>
-			</div> <!-- List Content -->
-			<div data-role="footer" data-theme="c" data-position="fixed">
-				<div data-role="navbar">
-					<ul>
-						<li><a href="#search" data-icon="search">Search</a></li>
-                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
-                        <li><a href="#home" data-icon="home">Home</a></li>
-						<li><a href="#cart" data-icon="info">Grocery List</a></li>
-					</ul>
-				</div><!-- Navbar -->
-			</div> <!-- Footer -->
-		</div><!-- Sausage Cheese Balls Page -->
 		
 		<div data-role="page" id="breakfast" data-theme="a" data-add-back-btn="true">
 			<div data-role="header" data-theme="a" data-position="fixed">
@@ -339,34 +215,7 @@
 				</div><!-- Navbar -->
 			</div> <!-- Footer -->
 		</div><!-- Breakfast Page -->
-		
-		<div data-role="page" id="bullsEye" data-theme="a" data-add-back-btn="true">
-			<div data-role="header" data-theme="a" data-position="fixed">
-				<h1>Recipe Stalker</h1>
-			</div> <!-- Header -->
-			<div data-role"content">
-				<ul>
-					<li><h1>Bull's Eyes</h1><p><h2>Ingredients:</h2><li>Bread</li><li>Eggs</li>
-					<li>Butter</li><li>Salt</li><li>Pepper</li>
-					<h3>Instructions:</h3>Use the opening of a small glass or jar to cut the center out of a slice of bread.
-					Keep the cut out center. Butter a skillet or pan.<br />
-					<h4>Using medium heat on the stove place the circle cut out and the bread slice onto the buttered pan. 
-					Crack the egg in the center of the bread, season with salt and pepper. Flip till egg is cooked and cut out 
-					toasted. Cut out is great for soaking up the runny yolk if not cooked through out.</h4></p></li>
-				</ul>
-				<a href="#cart" data-role="button" data-theme="b" data-icon="star">Add to grocery list</a>
-			</div> <!-- List Content -->
-			<div data-role="footer" data-theme="c" data-position="fixed">
-				<div data-role="navbar">
-					<ul>
-						<li><a href="#search" data-icon="search">Search</a></li>
-                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
-                        <li><a href="#home" data-icon="home">Home</a></li>
-						<li><a href="#cart" data-icon="info">Grocery List</a></li>
-					</ul>
-				</div><!-- Navbar -->
-			</div> <!-- Footer -->
-		</div><!-- Bulls eyes Page -->
+
 		
 		<div data-role="page" id="lunch" data-theme="a" data-add-back-btn="true">
 			<div data-role="header" data-theme="a" data-position="fixed">
@@ -489,7 +338,7 @@
 			<div data-role="header" data-theme="a" data-position="fixed">
 				<h1>Recipe Stalker</h1>
 			</div> <!-- Header -->
-			<div data-role"content">
+			<div data-role="content">
 			Search recipes
 			</div> <!-- List Content -->
 			<div data-role="footer" data-theme="c" data-position="fixed">
@@ -503,6 +352,64 @@
 				</div><!-- Navbar -->
 			</div> <!-- Footer -->
 		</div><!-- Search Page -->
+
+
+        <div data-role="page" id="dataCSV" data-theme="a" data-add-back-btn="true">
+            <div data-role="header" data-theme="a" data-position="fixed">
+                <h1>CSV data</h1>
+            </div> <!-- Header -->
+            <div data-role="content">
+
+        </div> <!-- List Content -->
+        <div data-role="footer" data-theme="c" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#search" data-icon="search">Search</a></li>
+                    <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
+                    <li><a href="#home" data-icon="home">Home</a></li>
+                    <li><a href="#cart" data-icon="info">Grocery List</a></li>
+                </ul>
+            </div><!-- Navbar -->
+        </div> <!-- Footer -->
+        </div><!-- CSV Page -->
+
+        <div data-role="page" id="dataJSON" data-theme="a" data-add-back-btn="true">
+            <div data-role="header" data-theme="a" data-position="fixed">
+                <h1>JSON data</h1>
+            </div> <!-- Header -->
+            <div data-role="content">
+
+            </div> <!-- List Content -->
+            <div data-role="footer" data-theme="c" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#search" data-icon="search">Search</a></li>
+                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+                        <li><a href="#cart" data-icon="info">Grocery List</a></li>
+                    </ul>
+                </div><!-- Navbar -->
+            </div> <!-- Footer -->
+        </div><!-- JSON Page -->
+
+        <div data-role="page" id="dataXML" data-theme="a" data-add-back-btn="true">
+            <div data-role="header" data-theme="a" data-position="fixed">
+                <h1>XML data</h1>
+            </div> <!-- Header -->
+            <div data-role="content">
+
+            </div> <!-- List Content -->
+            <div data-role="footer" data-theme="c" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#search" data-icon="search">Search</a></li>
+                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+                        <li><a href="#cart" data-icon="info">Grocery List</a></li>
+                    </ul>
+                </div><!-- Navbar -->
+            </div> <!-- Footer -->
+        </div><!-- XML Page -->
 
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
