@@ -1,9 +1,5 @@
-// Taylor Eisman
-// ASD 09/12
-// Project 1
-
-var json = {
-	"recipe1": {
+{
+    "recipes" : []
         "recipeName": ["Recipe Name:", "Bacon Wraps"],
 		"category": ["Category:", "Appetizers"],
 		"ingredient1": ["Ingrediant:", "Cocktail sausages"],
