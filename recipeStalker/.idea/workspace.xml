@@ -58,10 +58,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="396" column="23" selection-start="18938" selection-end="18938" vertical-scroll-proportion="0.5940171">
+            <state line="396" column="23" selection-start="18938" selection-end="18938" vertical-scroll-proportion="-9.875">
               <folding />
             </state>
           </provider>
@@ -85,13 +85,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascript/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="12" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
+            <state line="47" column="113" selection-start="1990" selection-end="1990" vertical-scroll-proportion="0.9710744">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xhr/data.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="24" selection-start="82" selection-end="673" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -117,8 +126,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="67" />
-    <option name="y" value="82" />
+    <option name="x" value="43" />
+    <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="874" />
   </component>
@@ -406,7 +415,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="82" width="1440" height="874" extended-state="0" />
+    <frame x="43" y="22" width="1440" height="874" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -533,22 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xhr/data.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="77" selection-start="69" selection-end="69" vertical-scroll-proportion="0.042075735">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="7" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" />
@@ -563,8 +556,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="396" column="23" selection-start="18938" selection-end="18938" vertical-scroll-proportion="0.5940171">
+        <state line="396" column="23" selection-start="18938" selection-end="18938" vertical-scroll-proportion="-9.875">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xhr/data.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="24" selection-start="82" selection-end="673" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="113" selection-start="1990" selection-end="1990" vertical-scroll-proportion="0.9710744">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
