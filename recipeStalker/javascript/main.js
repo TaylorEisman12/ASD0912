@@ -96,7 +96,7 @@ $('#dataJSON').on('pageinit', function(){
                 }
             }
 
-        });
+        })
     }
 
 $('#dataCSV').on('pageinit', function(){
@@ -130,7 +130,7 @@ $('#dataCSV').on('pageinit', function(){
 
             }
 
-        });
+        })
     }
 
 });
