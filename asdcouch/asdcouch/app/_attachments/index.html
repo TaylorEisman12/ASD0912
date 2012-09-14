@@ -1,20 +1,448 @@
+<!DOCTYPE html>
+<!-- Taylor Eisman -->
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="user-scalable=no, width=device-width" />
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Recipe Stalker" />
+		<meta name="keywords" content="recipe" />
+		<meta name="robots" content="noindex, nofollow" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<title>Recipe Stalker</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+		<link href="css/styles.css" rel="stylesheet" type="text/css" />
+		<script src="js/libs/modernizr.custom.min.js"></script>
+	</head>
+	<body>
+        <div data-role="page" id="main" data-theme="a">
+            <div data-role="header" data-theme="a" data-position="fixed">
+                <h1>Recipe Stalker</h1>
+            </div>
+            <div id="login">
+                Username<input type="text" id="loginUsername" maxlength="15" min="6">
+                Password:<input type="text" id="loginPassword" maxlength="15" min="6">
+                <br />
+                <input type="checkbox" value="yes" name="saveLoginInfo" data-theme="a" id="saveLoginInfo" />
+                <label for="saveLoginInfo">Save username and password</label>
+                <br />
+                <a href="#home" data-role="button" data-theme="b">Login</a>
+                <a href="#register" data-role="button" data-theme="b">New User</a>
+            </div>
+        </div> <!-- main page -->
+
+        <div data-role="page" id="register" data-theme="a">
+            <div data-role="header" data-theme="a" data-position="fixed">
+                <h1>Recipe Stalker</h1>
+            </div>
+            <div id="signUp">
+                Username desired:<input type="text" id="username" maxlength="15" min="6">
+                Password:<input type="text" id="password" maxlength="15" min="6">
+                Confirm Password:<input type="text" id="confirmPassword" maxlength="15" min="6">
+                Email:<input type="text" id="email">
+                <a href="#home" data-role="button" data-theme="b">Get Stalkin</a>
+            </div>
+        </div><!-- Register page -->
+
+		<div data-role="page" id="home" data-theme="a">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>Recipe Stalker</h1>
+			</div> <!-- Header -->
+			<div id="cta">
+				<img src="image" id="ctaImage">
+				<nav>
+					<a href="#addRecipe" data-role="button" data-theme="b">Add A Recipe</a>
+				</nav>
+			</div>
+			<div data-role"content">
+				<ul data-role="listview" data-shadow="true" data-inset="true">
+					<li><div class="linkTitle">View :</div></li>
+				</ul>
+				<ul data-role="listview" data-shadow="true" data-inset="true">
+                    <a href="#dataCloud" data-role="button" data-theme="b" data-icon="star">Cloud JSON Data</a>
+                    <a href="#dataCSV" data-role="button" data-theme="b" data-icon="star">CSV Data</a>
+                    <a href="#dataJSON" data-role="button" data-theme="b" data-icon="star">JSON Data</a>
+                    <a href="#dataXML" data-role="button" data-theme="b" data-icon="star">XML Data</a>
+					<a href="#myProfile" data-role="button" data-theme="b" data-icon="star">My Profile</a>
+					<a href="#breakfast" data-role="button" data-theme="b" data-icon="star">Breakfast</a>
+					<a href="#lunch" data-role="button" data-theme="b" data-icon="star">Lunch</a>
+					<a href="#dinner" data-role="button" data-theme="b" data-icon="star">Dinner</a>
+					<a href="#breads" data-role="button" data-theme="b" data-icon="star">Breads</a>
+					<a href="#appetizers" data-role="button" data-theme="b" data-icon="star">Appetizers</a>
+					<a href="#snacks" data-role="button" data-theme="b" data-icon="star">Snacks</a>
+				</ul>
+			</div> <!-- List Content -->
+			<div data-role="footer" data-theme="c" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#search" data-icon="search">Search</a></li>
+                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
+						<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+						<li><a href="#cart" data-icon="info">Grocery List</a></li>
+					</ul>
+				</div><!-- Navbar -->
+			</div> <!-- Footer -->
+		</div><!-- home Page -->
+
+
+
+		<div data-role="page" id="dataCloud" data-theme="a">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>Cloud JSON Data</h1>
+			</div> <!-- header -->
+			<div data-role="content">
+				<ul id="recipeList">
+				</ul>
+			</div><!-- content -->
+			<div data-role="footer" data-theme="c" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#search" data-icon="search">Search</a></li>
+                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#cart" data-icon="info">Grocery List</a></li>
+					</ul>
+				</div><!-- Navbar -->
+			</div> <!-- Footer -->
+		</div><!-- Cloud JSON Page -->
+
+
+        <div data-role="page" id="addRecipe" data-theme="a">
+            <div data-role="header" data-theme="a" data-position="fixed">
+                <h1>Add A Recipe</h1>
+            </div><!-- header -->
+            <span id="requiredHint">*fields are required.</span>
+            <div data-role="content">
+                <form action="" id="addRecipeForm">
+                    <div data-role="fieldcontain">
+                        <label for="recipeName">*Name of Recipe</label>
+                        <input type="text" name="recipeName" id="recipeName" placeholder="Please enter recipe name." class="required" />
+                        <label for="category">*Category</label>
+                        <select name="category" id="category" data-native-menu="false" class="required">
+                            <option data-placeholder="true">Select a Category</option>
+                            <option value="breakfast">Breakfast</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="dinner">Dinner</option>
+                            <option value="breads">Breads</option>
+                            <option value="appetizers">Appetizers</option>
+                            <option value="snacks">Snacks</option>
+                        </select>
+                    </div><!-- Category dropdown fieldcontain -->
+                    <div data-role="fieldcontain">
+                        <label for="ingrediant1">*Ingrediant</label>
+                        <input type="text" name="ingrediant1" id="ingrediant1" placeholder="Please enter a Ingrediant." class="required" />
+                        <div>
+                            <fieldset data-role="controlgroup">
+                                <legend>Measurement:</legend>
+                                <input type="text" id="measurement" name="numMeasurement" value="1 1/3" maxlength="6" />
+                                <input type="radio" value="number" name="measurement" data-theme="a" id="number" />
+                                <label for="number">Number of Ingrediants</label>
+                                <input type="radio" value="cups" name="measurement" data-theme="a" id="cups" class="required" />
+                                <label for="cups">Cups</label>
+                                <input type="radio" value="teaspoons" name="measurement" data-theme="a" id="teaspoons" />
+                                <label for="teaspoons">Teaspoons</label>
+                                <input type="radio" value="tablespoons" name="measurement" data-theme="a" id="tablespoons" />
+                                <label for="tablespoons">Tablespoons</label>
+                                <input type="radio" value="ounces" name="measurement" data-theme="a" id="ounces" />
+                                <label for="ounces">Ounces</label>
+                            </fieldset>
+                            <a href="addIngrediant" data-role="button" data-theme="a" data-icon="plus">Add Ingrediant</a>
+                        </div>
+                    </div><!-- Measurments Radio fieldcontain -->
+
+                    <div data-role="fieldcontain">
+                        <label for="addToFav">Add to my favorites?</label><br />
+                        <select data-role="slider" data-theme="b">
+                            <option value="off">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div><!-- Add to Favorites slider fieldcontain -->
+                    <div data-role="fieldcontain">
+                        <label for="prepTime">Minutes to prep?</label>
+                        <input type="range" name="prepTime" id="prepTime" data-theme="b" value="60" min="0" max="120" />
+                    </div><!-- Minutes to prep slider fieldcontain -->
+                    <div data-role="fieldcontain">
+                        <label for="dateAdded">Date Added</label>
+                        <input name="dateAdded" id="dateAdded" type="date" data-role="date" data-options='{"mode": "calbox"}'>
+                    </div><!-- Date added fieldcontain -->
+                    <div data-role="fieldcontain">
+                        <label for="instructions">Instructions</label>
+                        <textarea></textarea>
+                    </div><!-- Instructions textarea fieldcontain -->
+                    <div data-role="fieldcontain">
+                        <input type="submit" value="Submit" data-inline="true" data-theme="b"  />
+                        <a href="#home" id="cancelLink">Cancel</a>
+                    </div><!-- submit/clear buttons fieldcontain -->
+                    <a href="#recordRecipeErrors" id="recipeFormErrors" data-rel="dialog"></a>
+                </form>
+            </div> <!-- Content -->
+        </div><!-- Add Recipe Page -->
+		
+		<div data-role="page" id="appetizers" data-theme="a" data-add-back-btn="true">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>Recipe Stalker</h1>
+			</div> <!-- Header -->
+			<div data-role"content">
+				Search: Filter: Something
+
+			</div> <!-- List Content -->
+			<div data-role="footer" data-theme="c" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#search" data-icon="search">Search</a></li>
+                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#cart" data-icon="info">Grocery List</a></li>
+					</ul>
+				</div><!-- Navbar -->
+			</div> <!-- Footer -->
+		</div><!-- Appetizers Page -->	
+
+		<div data-role="page" id="breads" data-theme="a" data-add-back-btn="true">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>Recipe Stalker</h1>
+			</div> <!-- Header -->
+			<div data-role"content">
+				Search: Filter: Something
+
+			</div> <!-- List Content -->
+			<div data-role="footer" data-theme="c" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#search" data-icon="search">Search</a></li>
+                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#cart" data-icon="info">Grocery List</a></li>
+					</ul>
+				</div><!-- Navbar -->
+			</div> <!-- Footer -->
+		</div><!-- Breads Page -->
+		
+		<div data-role="page" id="breakfast" data-theme="a" data-add-back-btn="true">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>Recipe Stalker</h1>
+			</div> <!-- Header -->
+			<div data-role"content">
+				Search: Filter: Something
+				<ul data-role="listview" data-shadow="true" data-inset="true">
+					<li>
+						<a href="#bullsEye"><h1>Bull's Eyes</h1><p><h2>Ingredients:</h2>Bread, Eggs, Butter, Salt, Pepper</a>
+					</li>
+				</ul>
+			</div> <!-- List Content -->
+			<div data-role="footer" data-theme="c" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#search" data-icon="search">Search</a></li>
+                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#cart" data-icon="info">Grocery List</a></li>
+					</ul>
+				</div><!-- Navbar -->
+			</div> <!-- Footer -->
+		</div><!-- Breakfast Page -->
+
+		
+		<div data-role="page" id="lunch" data-theme="a" data-add-back-btn="true">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>Recipe Stalker</h1>
+			</div> <!-- Header -->
+			<div data-role"content">
+				Search: Filter: Something
+				<ul data-role="listview" data-shadow="true" data-inset="true">
+					<li>
+						<a href="#lunch"><h1>Lunch</h1><p><h2>Ingredients:</h2>Lunch</a>
+					</li>
+				</ul>
+			</div> <!-- List Content -->
+			<div data-role="footer" data-theme="c" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#search" data-icon="search">Search</a></li>
+                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#cart" data-icon="info">Grocery List</a></li>
+					</ul>
+				</div><!-- Navbar -->
+			</div> <!-- Footer -->
+		</div><!-- Lunch Page -->
+
+		<div data-role="page" id="dinner" data-theme="a" data-add-back-btn="true">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>Recipe Stalker</h1>
+			</div> <!-- Header -->
+			<div data-role"content">
+				Search: Filter: Something
+				<ul data-role="listview" data-shadow="true" data-inset="true">
+					<li>
+						<a href="#dinner"><h1>Dinner</h1><p><h2>Ingredients:</h2>Dinner</a>
+					</li>
+				</ul>
+			</div> <!-- List Content -->
+			<div data-role="footer" data-theme="c" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#search" data-icon="search">Search</a></li>
+                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#cart" data-icon="info">Grocery List</a></li>
+					</ul>
+				</div><!-- Navbar -->
+			</div> <!-- Footer -->
+		</div><!-- Dinner Page -->
+		
+		<div data-role="page" id="snacks" data-theme="a" data-add-back-btn="true">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>Recipe Stalker</h1>
+			</div> <!-- Header -->
+			<div data-role"content">
+				Search: Filter: Something
+				<ul data-role="listview" data-shadow="true" data-inset="true">
+					<li>
+						<a href="#snacks"><h1>Snacks</h1><p><h2>Ingredients:</h2>Snacks</a>
+					</li>
+				</ul>
+			</div> <!-- List Content -->
+			<div data-role="footer" data-theme="c" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#search" data-icon="search">Search</a></li>
+                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#cart" data-icon="info">Grocery List</a></li>
+					</ul>
+				</div><!-- Navbar -->
+			</div> <!-- Footer -->
+		</div><!-- Snacks Page -->
+		
+		<div data-role="page" id="myProfile" data-theme="a" data-add-back-btn="true">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>Recipe Stalker</h1>
+			</div> <!-- Header -->
+			<div data-role"content">
+            Profile Image <br />
+			Profile name:<br />
+			My recipes<br />
+            About me<br />
+            Cooking experience:<br />
+            View my stalkers<br />
+            My favorite recipes<br />
+            Who I am Stalking
+			</div> <!-- List Content -->
+			<div data-role="footer" data-theme="c" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#search" data-icon="search">Search</a></li>
+                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#cart" data-icon="info">Grocery List</a></li>
+					</ul>
+				</div><!-- Navbar -->
+			</div> <!-- Footer -->
+		</div><!-- My Profile Page -->
+		
+		<div data-role="page" id="cart" data-theme="a" data-add-back-btn="true">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>Recipe Stalker</h1>
+			</div> <!-- Header -->
+			<div data-role"content">
+			Grocery List
+			</div> <!-- List Content -->
+			<div data-role="footer" data-theme="c" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#search" data-icon="search">Search</a></li>
+                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#cart" data-icon="info" class="ui-btn-active">Grocery List</a></li>
+					</ul>
+				</div><!-- Navbar -->
+			</div> <!-- Footer -->
+		</div><!-- Grocery Page -->
+		
+		<div data-role="page" id="search" data-theme="a" data-add-back-btn="true">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>Recipe Stalker</h1>
+			</div> <!-- Header -->
+			<div data-role="content">
+			Search recipes
+			</div> <!-- List Content -->
+			<div data-role="footer" data-theme="c" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#search" data-icon="search" class="ui-btn-active">Search</a></li>
+                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#cart" data-icon="info">Grocery List</a></li>
+					</ul>
+				</div><!-- Navbar -->
+			</div> <!-- Footer -->
+		</div><!-- Search Page -->
+
+
+        <div data-role="page" id="dataCSV" data-theme="a" data-add-back-btn="true">
+            <div data-role="header" data-theme="a" data-position="fixed">
+                <h1>CSV data</h1>
+            </div> <!-- Header -->
+            <div data-role="content">
+
+        </div> <!-- List Content -->
+        <div data-role="footer" data-theme="c" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#search" data-icon="search">Search</a></li>
+                    <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
+                    <li><a href="#home" data-icon="home">Home</a></li>
+                    <li><a href="#cart" data-icon="info">Grocery List</a></li>
+                </ul>
+            </div><!-- Navbar -->
+        </div> <!-- Footer -->
+        </div><!-- CSV Page -->
+
+        <div data-role="page" id="dataJSON" data-theme="a" data-add-back-btn="true">
+            <div data-role="header" data-theme="a" data-position="fixed">
+                <h1>JSON data</h1>
+            </div> <!-- Header -->
+            <div data-role="content">
+
+            </div> <!-- List Content -->
+            <div data-role="footer" data-theme="c" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#search" data-icon="search">Search</a></li>
+                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+                        <li><a href="#cart" data-icon="info">Grocery List</a></li>
+                    </ul>
+                </div><!-- Navbar -->
+            </div> <!-- Footer -->
+        </div><!-- JSON Page -->
+
+        <div data-role="page" id="dataXML" data-theme="a" data-add-back-btn="true">
+            <div data-role="header" data-theme="a" data-position="fixed">
+                <h1>XML data</h1>
+            </div> <!-- Header -->
+            <div data-role="content">
+
+            </div> <!-- List Content -->
+            <div data-role="footer" data-theme="c" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#search" data-icon="search">Search</a></li>
+                        <li><a href="#topRecipes" data-icon="star">Top Recipes</a></li>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+                        <li><a href="#cart" data-icon="info">Grocery List</a></li>
+                    </ul>
+                </div><!-- Navbar -->
+            </div> <!-- Footer -->
+        </div><!-- XML Page -->
+
 	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
-</head>
-<body>
-	<div data-role="page" id="home">
-		<div data-role="header" data-position="fixed">
-			<h1>Home</h1>
-		</div>
-		<div data-role="content" class="ui-body-a">
-			<ul id="recipeList">
-			</ul>
-		</div>
-	<script src="js/main.js"></script>
-</body>
+	<script type="text/javascript" src="javascript/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="javascript/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+
+	</body>
 </html>
+
+

@@ -15,9 +15,13 @@ $(document).ready(function() {
 				var dateAdded = recipe.value.dateAdded;
 				var instructions = recipe.value.instructions;
 				$('#recipeList').append(
-					$('<li>').text(category)
+					$('<li>').append(
+						$('<a>').attr("href", "#")
+						.text(recipeName)
+					)
 				);
 			});
+			$('#recipeList').listview('refresh');	
 		}
 	});
 });

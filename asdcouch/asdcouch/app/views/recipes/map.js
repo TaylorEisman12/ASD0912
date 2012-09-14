@@ -1,7 +1,7 @@
 function (doc){
 	if (doc._id.substring(0 ,7) != "design/"){
 	}emit(doc._id, {
-	"recipeName": doc.title,
+	"recipeName": doc.recipeName,
 	"category": doc.category,
 	"ingredient1": doc.ingredient1,
 	"measurement1": doc.measurement1,
